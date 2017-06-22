@@ -1,0 +1,26 @@
+{
+  "name": "Yellow Messenger",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Live chat plugin",
+  "homepage_url": "https://www.yellowmessenger.com",
+  "content_scripts": [
+    {
+      "matches": ["https://*/*","http://*/*"],
+      "js": ["jquery.min.js", "inject.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Yellow Messenger"
+  },
+  "permissions": [
+    "https://*/*",
+    "http://*/*",
+    "tabs"
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
