@@ -1,6 +1,6 @@
 (function() {
     $.ajax({
-        url: "https://bots.botplatform.io/vault/domain/"+window.location.hostname,
+        url: "https://bots.botplatform.io/vault/mapping/"+window.location.hostname,
         method: "GET",
         success: function(data){
             if(data.success){
