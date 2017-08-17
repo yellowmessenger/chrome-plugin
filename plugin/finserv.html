@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+<body>
+
+
+
+<script type="text/javascript" src="https://chat.botplatform.io/plugin-v2.js?bot=bot_1494260176641&view=compact"></script>
+<script type="text/javascript">
+    var search = location.search.substring(1);
+    var open = false;
+    if(search){
+        var params = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
+        open = !!(params && params.bot_event);
+    }
+    var options = {
+        autoOpen: open,
+        userId: "<user unique id from experia portal>",
+        name: "<name of the user>"
+    };
+    if(document.referrer.toString().indexOf("/B2C_CustomLogin.aspx") !== -1){
+        options["clear"] = true;
+    }
+    window.botplatform.init(options);
+</script>
+</body>
+</html>
